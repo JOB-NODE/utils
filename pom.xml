@@ -13,11 +13,11 @@
     <description>Utilities classes for JobNode</description>
 
     <distributionManagement>
-       <repository>
-         <id>github</id>
-         <name>GitHub JobNode Apache Maven Packages</name>
-         <url>https://maven.pkg.github.com/JOB-NODE/utils</url>
-       </repository>
+        <repository>
+            <id>github</id>
+            <name>GitHub JobNode Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/JOB-NODE/utils</url>
+        </repository>
     </distributionManagement>
 
     <licenses>
@@ -61,6 +61,26 @@
                         <id>attach-javadocs</id>
                         <goals>
                             <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.5</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
                         </goals>
                     </execution>
                 </executions>
