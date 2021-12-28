@@ -31,5 +31,5 @@ Then add the [com.jobnode.utils](https://jitpack.io/#JOB-NODE/utils/latest) depe
 
 
 ## TODOs:
-  [ ] rethink storage
+  - [ ] rethink storage
   
