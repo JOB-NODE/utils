@@ -12,6 +12,14 @@
     <name>JobNode Utils</name>
     <description>Utilities classes for JobNode</description>
 
+    <distributionManagement>
+       <repository>
+         <id>github</id>
+         <name>GitHub JobNode Apache Maven Packages</name>
+         <url>https://maven.pkg.github.com/JOB-NODE/utils</url>
+       </repository>
+    </distributionManagement>
+
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
