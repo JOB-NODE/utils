@@ -1,3 +1,6 @@
+[![Java CI with Maven](https://github.com/JOB-NODE/utils/actions/workflows/maven.yml/badge.svg)](https://github.com/JOB-NODE/utils/actions/workflows/maven.yml)
+[![Maven Package](https://github.com/JOB-NODE/utils/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/JOB-NODE/utils/actions/workflows/maven-publish.yml)
+
 # Jobnode utils
 
 Utils package for JobNode services, [read the docs](https://jitpack.io/com/github/JOB-NODE/utils/latest/javadoc/).
