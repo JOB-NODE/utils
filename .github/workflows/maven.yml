@@ -25,3 +25,7 @@ jobs:
 
     - name: Coverage report
       uses: cicirello/jacoco-badge-generator@v2.5.0
+
+    - name: Upload Coverage report
+      uses: codecov/codecov-action@v2
+
