@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ProcessProgressTests {
   @Test
@@ -21,12 +21,14 @@ public class ProcessProgressTests {
     ProcessProgress<SimpleActivity> progress = new ProcessProgress<>(process);
 
     assertEquals(0, progress.getProgress(), "Empty ProcessProgress's progress is 0");
+    assertFalse(activityBasicProgress.isDone(), "Activity isn't done");
 
     progress.addProgress(activityBasicProgress);
 
     assertEquals(0, progress.getProgress(), "No activity is done yet");
 
     activityBasicProgress.setDone(true);
+    assertTrue(activityBasicProgress.isDone(), "Activity is done");
 
     assertEquals(1, progress.getProgress(), "Process is done");
   }

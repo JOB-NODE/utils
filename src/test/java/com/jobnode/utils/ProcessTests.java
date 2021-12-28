@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class ProcessTests {
 
@@ -28,10 +29,16 @@ public class ProcessTests {
     SimpleActivity activity1 = new SimpleActivity("1"),
             activity2 = new SimpleActivity("2");
 
+    // -- add first activity
     process.add(activity1);
-    process.add(activity2);
-    assertEquals(2, process.size(), "Process has two activities");
 
+    assertFalse(process.swap(activity1,activity2),"Activity 2 isn't in the process");
+    assertFalse(process.swap(activity2,activity1),"Activity 2 isn't in the process");
+
+    // -- add second activity
+    process.add(activity2);
+
+    assertEquals(2, process.size(), "Process has two activities");
     assertEquals("12", process.stream().map(IActivity::getName).collect(Collectors.joining()));
 
     process.swap(activity1, activity2);
