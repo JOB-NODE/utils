@@ -1,5 +1,6 @@
 [![Java CI with Maven](https://github.com/JOB-NODE/utils/actions/workflows/maven.yml/badge.svg)](https://github.com/JOB-NODE/utils/actions/workflows/maven.yml)
 [![Maven Package](https://github.com/JOB-NODE/utils/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/JOB-NODE/utils/actions/workflows/maven-publish.yml)
+[![Code coverage](https://codecov.io/gh/JOB-NODE/utils/branch/master/graph/badge.svg)](https://codecov.io/gh/JOB-NODE/utils)
 
 # Jobnode utils
 
