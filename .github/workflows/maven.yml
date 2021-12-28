@@ -24,4 +24,4 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Coverage report
-      uses: cicirello/jacoco-badge-generator@v2.5
+      uses: cicirello/jacoco-badge-generator@v2.5.0
