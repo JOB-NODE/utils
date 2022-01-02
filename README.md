@@ -4,7 +4,7 @@
 
 # Jobnode utils
 
-Utils package for JobNode services, [read the docs](https://jitpack.io/com/github/JOB-NODE/utils/latest/javadoc/).
+Utils package for JobNode services, [read the docs](https://jitpack.io/com/github/JOB-NODE/utils/latest/javadoc/), [read UML diagram](https://tinyurl.com/jb-steps).
 
 ## How to use
 
