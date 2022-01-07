@@ -4,13 +4,13 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 /**
- * Process progress, calculated from the progress of each activity
- *
+ * Process progress implementation, using a Map to store current progresses
  * @param <T> type of activity
  */
-public class ProcessProgress<T extends IActivity> implements IProgress {
+public class ProcessProgress<T extends IActivity> implements IProcessProgress<T> {
   final private Process<T> process;
   final private Map<String, IProgress> progressMap;
 
@@ -38,26 +38,20 @@ public class ProcessProgress<T extends IActivity> implements IProgress {
     this.progressMap.put(progress.getActivity().getName(), progress);
   }
 
+
   /**
-   * @return the activity of the progress, which is the actual process
+   * @return stream of the progresses collected
    */
   @Override
-  public IActivity getActivity() {
-    return process;
+  public Stream<IProgress> stream() {
+    return progressMap.values().stream();
   }
 
   /**
-   * calculates the progress from activities progress map
-   *
-   * @return the calculated progress
+   * @return the process of this progress
    */
   @Override
-  public double getProgress() {
-    final double ratio = 1.0 / process.size();
-    return process.stream()
-            .map(IActivity::getName)
-            .filter(progressMap::containsKey)
-            .mapToDouble(activity -> progressMap.get(activity).getProgress() * ratio)
-            .sum();
+  public IProcess<T> getProcess() {
+    return process;
   }
 }

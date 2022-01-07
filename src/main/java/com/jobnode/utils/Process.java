@@ -6,11 +6,10 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * A Process is a series of activities
- *
+ * A Basic implementation of a Process
  * @param <T> type of the activity
  */
-public class Process<T extends IActivity> implements IActivity {
+public class Process<T extends IActivity> implements IProcess<T> {
   private final List<T> activities;
   private final String name;
 
@@ -76,17 +75,12 @@ public class Process<T extends IActivity> implements IActivity {
     return true;
   }
 
-  /**
-   * @return size of the process
-   */
+  @Override
   public int size() {
     return activities.size();
   }
 
-  /**
-   * @return a Stream of process's activities
-   * @see Stream
-   */
+  @Override
   public Stream<T> stream() {
     return activities.stream();
   }
