@@ -7,10 +7,10 @@ import java.util.stream.Collectors;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class ProcessTests {
+class ProcessTests {
 
   @Test
-  public void oneActivity() {
+  void oneActivity() {
     Process<SimpleActivity> process = new Process<>("process");
     assertEquals("process", process.getName());
     SimpleActivity activity1 = new SimpleActivity("activity-1"),
@@ -24,7 +24,7 @@ public class ProcessTests {
   }
 
   @Test
-  public void swapActivities() {
+  void swapActivities() {
     Process<SimpleActivity> process = new Process<>("process");
     SimpleActivity activity1 = new SimpleActivity("1"),
             activity2 = new SimpleActivity("2");

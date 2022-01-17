@@ -11,8 +11,8 @@ import java.util.stream.Stream;
  * @param <T> type of activity
  */
 public class ProcessProgress<T extends IActivity> implements IProcessProgress<T> {
-  final private Process<T> process;
-  final private Map<String, IProgress> progressMap;
+  private final Process<T> process;
+  private final Map<String, IProgress> progressMap;
 
   /**
    * Construct ProcessProgress from a given process, which cannot be changed after

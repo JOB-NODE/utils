@@ -6,7 +6,7 @@ package com.jobnode.utils;
  * @param <T> an activity type
  */
 public class BasicProgress<T extends IActivity> implements IProgress {
-  final private T activity;
+  private final T activity;
   private boolean isDone;
 
   public BasicProgress(T activity, boolean isDone) {

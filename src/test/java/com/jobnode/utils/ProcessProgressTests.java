@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ProcessProgressTests {
+class ProcessProgressTests {
   @Test
   @DisplayName("Progress of a process with one basic activity")
   void basicProgress() {
